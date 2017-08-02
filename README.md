@@ -15,12 +15,13 @@ Front-end eCommerce project using React. User will be able to pick and purchase 
 
 * Navbar.js - Navigation header, this will give the option where the user will go.
 * Cart.js - shows list of items, will automatically add the costing of items, allow user to checkout.  
-* Product.js -
+* Product.js - view all products
  - `props.product.name` - name would be a string
  - `props.product.description` - description would be a string
  - `props.product.cost` - cost would be a number
-* Item.js - there will probably be more of these, but for now, this will list the individual item in the list of products.
+* Watch1.js to Watch10.js - individual product page containing name, description, cost and option to buy  
 * Modal.js - pop up to share news about the site or welcome user to the site, this will only be open for a second
+* Checkout - contain user form to complete transaction (but not transaction will be processed for the sake of this project).
 
 ## Inspiration Sites
 
