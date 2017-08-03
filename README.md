@@ -20,7 +20,7 @@ Front-end eCommerce project using React. User will be able to pick and purchase 
  - `props.product.description` - description would be a string
  - `props.product.cost` - cost would be a number
 * Modal.js - pop up to share news about the site or welcome user to the site, this will only be open for a second
-* Checkout - contain user form to complete transaction (but not transaction will be processed for the sake of this project).
+* Checkout.js - contain user form to complete transaction (but not transaction will be processed for the sake of this project).
 
 ## Inspiration Sites
 

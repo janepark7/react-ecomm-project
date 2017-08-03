@@ -1,16 +1,30 @@
 import "./App.scss";
 import React from "react";
-import PRODUCTS from "json/products.json";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Home from "pages/Home";
+import Navigation from "components/Navigation";
+import Product from "pages/Product";
+import Cart from "pages/Cart";
+import Checkout from "pages/Checkout";
+import FourOhFour from "pages/404";
 
 class App extends React.Component {
 	render() {
 		return (
-			<div className="App">
-			{PRODUCTS.map((product) => {
-				return <h1>{product.name}</h1>;
-			})}
-			<pre>{JSON.stringify(PRODUCTS, null, 2)}</pre>
-			</div>
+
+			<BrowserRouter>
+				<div className="navbar">
+					<Navigation />
+					<Switch>
+						<Route exact path = "/" component={Home} />
+						<Route exact path = "/Product" component={Product} />
+						<Route exact path = "/Cart" component={Cart} />
+						<Route exact path = "/Checkout" component={Checkout} />
+						<Route exact path= "*" component={FourOhFour} />
+					</Switch>
+				</div>
+			</BrowserRouter>
+
 		);
 	}
 }
