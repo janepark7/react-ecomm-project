@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "pages/Home";
 import Navigation from "components/Navigation";
-import Product from "pages/Product";
+import Item from "pages/Item";
 import Cart from "pages/Cart";
 import Checkout from "pages/Checkout";
 import FourOhFour from "pages/404";
@@ -17,7 +17,7 @@ class App extends React.Component {
 					<Navigation />
 					<Switch>
 						<Route exact path = "/" component={Home} />
-						<Route exact path = "/Product" component={Product} />
+						<Route exact path = "/Item" component={Item} />
 						<Route exact path = "/Cart" component={Cart} />
 						<Route exact path = "/Checkout" component={Checkout} />
 						<Route exact path= "*" component={FourOhFour} />

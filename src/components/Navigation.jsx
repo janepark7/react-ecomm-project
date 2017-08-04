@@ -8,9 +8,6 @@ class Navigation extends Component {
 			to: "/",
 			text: "Home",
 		}, {
-			to: "/Product",
-			text: "Product",
-		}, {
 			to: "/Item",
 			text: "Item",
 		}, {
