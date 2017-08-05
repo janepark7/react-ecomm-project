@@ -9,7 +9,12 @@ class Item extends Component {
 		return (
 			<div className="Item-List">
 				{PRODUCTS.map((product) => {
-					return <h1>{product.name}</h1>;
+					return [
+						<div className="Watch-type">
+						<h1>{product.name}</h1>
+						<img className="Watch-img" scr={product.images[0].small}/>
+						<h3>{product.description}</h3>
+					</div>];
 				})}
 			</div>
 		);
