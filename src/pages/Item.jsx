@@ -5,20 +5,12 @@ import { Link } from "react-router-dom";
 
 class Item extends Component {
 
-	render() {
-		return (
-			<div className="Item-List">
-				{PRODUCTS.map((product) => {
-					return [
-						<div className="Watch-type">
-						<h1>{product.name}</h1>
-						<img className="Watch-img" scr={product.images[0].small}/>
-						<h3>{product.description}</h3>
-					</div>];
-				})}
-			</div>
-		);
+	constructor(props) {
+		super(props);
+		this.state = {
+			itemId: props.match.params.itemId,
+		};
 	}
-
 }
+
 export default Item;

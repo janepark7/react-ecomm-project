@@ -8,8 +8,8 @@ class Navigation extends Component {
 			to: "/",
 			text: "Home",
 		}, {
-			to: "/Item",
-			text: "Item",
+			to: "/List",
+			text: "List",
 		}, {
 			to: "/Cart",
 			text: "Cart",
