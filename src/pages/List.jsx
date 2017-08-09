@@ -7,17 +7,23 @@ class List extends Component {
 
 	render() {
 		return (
-			<div className="Item-List">
-				{PRODUCTS.map((product, index) => {
-					return (
-						<Link to= {`/item/${index}`}>
-							<div className="Watch-type">
-									<h1>{product.name}</h1>
-									<img className="Watch-img" src={product.images[0].small}/>
-							</div>
-						</Link>
-					);
-				})}
+			<div className="Items">
+				<h1>Watch This</h1>
+				<ul className="Item-List">
+					{PRODUCTS.map((product, index) =>{
+						return (
+							<li className="Watch-type">
+								<Link to= {`/item/${index}`}>
+									<li key={product.name}></li>
+									<li><img className="Watch-img"
+													src={product.images[0].small}
+												/>
+									</li>
+								</Link>
+							</li>
+						);
+					})}
+				</ul>
 			</div>
 		);
 	}
