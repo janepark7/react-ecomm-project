@@ -15,7 +15,6 @@ class Cart extends Component {
 		console.log(cart);
 	}
 
-
 	render() {
 		return (
 			<div>
