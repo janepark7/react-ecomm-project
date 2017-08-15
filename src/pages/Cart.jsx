@@ -6,8 +6,12 @@ class Cart extends Component {
 		super(props);
 		this.state = {
 			items: {},
-			cart: [],
 		};
+	}
+
+	componentDidMount() {
+		totalCart: 0,
+		console.log(this.props);
 	}
 
 	addToCart(){
@@ -15,11 +19,22 @@ class Cart extends Component {
 		console.log(cart);
 	}
 
+
 	render() {
+		const { cart } = this.props;
 		return (
-			<div>
-				<h1>This is your Cart!</h1>
-			</div>
+			<div className="cart-items">
+			<h1>Shopping Cart</h1>
+			{cart.map((item)=> {
+				return (
+					<ul>
+					<img className="cart-img" src={item.images[0].small}/>
+					{item.name}
+					{item.price}
+					</ul>
+				);
+			})}
+		</div>
 		);
 	}
 }
