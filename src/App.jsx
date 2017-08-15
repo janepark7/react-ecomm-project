@@ -21,12 +21,11 @@ class App extends React.Component {
 
 	_getItem = (itemId) => {
 		return this.state.items.find(item => {
-			return item.id == itemId
+			return item.id === itemId;
 		});
 	}
 
 	_addCart = (itemId) => {
-		console.log('ITEMID>>>>>>>>',itemId)
 		const { items, cart } = this.state;
 		this.setState({
 			cart: [
@@ -43,7 +42,7 @@ class App extends React.Component {
 		return (
 			<BrowserRouter>
 				<div className="navbar">
-					<Navigation />
+					<Navigation cartTotal={this.state.cartTotal}/>
 					<Switch>
 						<Route exact path = "/" component={Home} />
 						<Route exact path = "/List" render={(props)=> {
@@ -64,7 +63,8 @@ class App extends React.Component {
 						<Route exact path = "/Cart"
 							render = {(props) => {
 								return (
-									<Cart cart = {cart} />
+									<Cart cart = {cart}
+										cartTotal={cartTotal} />
 								);
 							}}
 						/>
