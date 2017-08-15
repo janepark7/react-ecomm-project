@@ -9,11 +9,6 @@ class Cart extends Component {
 		};
 	}
 
-	componentDidMount() {
-		totalCart: 0,
-		console.log(this.props);
-	}
-
 	addToCart(){
 	 	const cart = [...this.state.cart];
 		console.log(cart);
@@ -22,10 +17,12 @@ class Cart extends Component {
 
 	render() {
 		const { cart } = this.props;
+		let sum = 0;
 		return (
 			<div className="cart-items">
 			<h1>Shopping Cart</h1>
 			{cart.map((item)=> {
+				sum = sum + parseInt(item.price);
 				return (
 					<ul>
 					<img className="cart-img" src={item.images[0].small}/>
@@ -34,6 +31,7 @@ class Cart extends Component {
 					</ul>
 				);
 			})}
+			Quantity: total: ${sum}
 		</div>
 		);
 	}
