@@ -1,6 +1,5 @@
 import "./Home.scss";
 import React, { Component } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
 import PRODUCTS from "json/products.json";
 
 class Home extends Component {
@@ -14,6 +13,7 @@ class Home extends Component {
 				A wide range from mens, womens, and of course we didn't forget the kids. Now it's time
 				to get shopping needs done!
 			</div>
-
-
+		);
+	}
+}
 export default Home;

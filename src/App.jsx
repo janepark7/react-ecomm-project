@@ -3,7 +3,6 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import PRODUCTS from "json/products.json";
 import { createStore } from "redux";
-import { Provider } from "react-redux";
 import Navigation from "components/Navigation";
 import reducers from "./reducers";
 import Home from "pages/Home";
