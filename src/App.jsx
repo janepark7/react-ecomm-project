@@ -2,7 +2,6 @@ import "./App.scss";
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import PRODUCTS from "json/products.json";
-import { createStore } from "redux";
 import Navigation from "components/Navigation";
 import reducers from "./reducers";
 import Home from "pages/Home";
@@ -13,7 +12,6 @@ import Checkout from "pages/Checkout";
 import Success from "pages/Success";
 import FourOhFour from "pages/404";
 
-const store=createStore(reducers);
 
 class App extends React.Component {
 	state = {
@@ -44,7 +42,6 @@ class App extends React.Component {
 	render() {
 		const { items, cart, cartTotal } = this.state;
 		return (
-			<Provider store={store}>
 			<BrowserRouter>
 				<div className="navbar">
 					<Navigation />
@@ -77,7 +74,6 @@ class App extends React.Component {
 					</Switch>
 				</div>
 			</BrowserRouter>
-		</Provider>
 		);
 	}
 }
