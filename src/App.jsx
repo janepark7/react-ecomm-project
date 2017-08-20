@@ -3,7 +3,6 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import PRODUCTS from "json/products.json";
 import Navigation from "components/Navigation";
-import reducers from "./reducers";
 import Home from "pages/Home";
 import List from "pages/List";
 import Item from "pages/Item";
@@ -11,7 +10,6 @@ import Cart from "pages/Cart";
 import Checkout from "pages/Checkout";
 import Success from "pages/Success";
 import FourOhFour from "pages/404";
-
 
 class App extends React.Component {
 	state = {
@@ -44,7 +42,7 @@ class App extends React.Component {
 		return (
 			<BrowserRouter>
 				<div className="navbar">
-					<Navigation />
+					<Navigation cartTotal={this.state.cartTotal}/>
 					<Switch>
 						<Route exact path = "/" component={Home} />
 						<Route exact path = "/List" render={(props)=> {
@@ -65,7 +63,8 @@ class App extends React.Component {
 						<Route exact path = "/Cart"
 							render = {(props) => {
 								return (
-									<Cart cart = {cart} />
+									<Cart cart = {cart}
+										cartTotal={cartTotal} />
 								);
 							}}
 						/>
@@ -74,6 +73,7 @@ class App extends React.Component {
 					</Switch>
 				</div>
 			</BrowserRouter>
+
 		);
 	}
 }
